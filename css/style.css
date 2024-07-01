@@ -1,0 +1,236 @@
+/* Fontes importadas */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Reset Geral */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --accent-color: #00BFCB;
+    --dark-color: #1E1E1E;
+    --white-color: #FFFFFF;
+    --font-size-title: 20px;
+    --font-size-text: 16px;
+    --font-size-details: 13px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+.card {
+    border: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* grid-auto-rows: max-content; */
+    gap: 20px;
+    padding: 20px;
+    background-color: #D9D9D9;
+}
+
+.profile {
+    grid-column: 2 / 5;
+}
+
+.publicar {
+    grid-column: 2 / 5;
+}
+
+.posts {
+    grid-column: 2 / 4;
+}
+
+.biografia {
+    grid-column: 4;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Menu */
+
+.navbar {
+    background-color: var(--white-color);
+    color: var(--dark-color);
+}
+
+/* Seção profile */
+
+.profile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-body h1 {
+    font-size: var(--font-size-title);
+}
+
+.profile-body p {
+    font-size: var(--font-size-details);
+}
+
+.profile-header img {
+    width: 100%;
+    height: 520px;
+    border-radius: 5px 5px 0px 0px;
+    background-size: cover;
+}
+
+.profile-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-body img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: translate(30px, -30px);
+    border: 6px solid var(--white-color);
+}
+
+.btn-profile {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-profile-area button {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    font-size: var(--font-size-details);
+    padding: 10px 15px;
+    border-radius: 3px;
+    display: inline-flex;
+    gap: 10px;
+}
+
+.btn-profile-area {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Seção Publicar */
+
+.input-publicar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+#inputPublicar {
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid var(--dark-color);
+    width: 100%;
+}
+
+.input-publicar img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#inputPublicar {
+    width: 90%;
+    padding: 10px;
+}
+
+/* Seção posts */
+
+.posts .card-header h1 {
+    font-size: var(--font-size-text);
+}
+
+.posts .card-header p {
+    font-size: var(--font-size-details);
+}
+
+.posts .card-header img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.posts-btn {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.posts-btn h3 {
+    font-size: var(--font-size-text);
+}
+
+.posts-acoes {
+    display: flex;
+    justify-content: space-around;
+}
+
+.posts .card {
+    width: 100%;
+    height: auto;
+}
+
+.posts.card {
+    width: 250px;
+    height: 420px;
+}
+
+.posts .card-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.posts .posts-img img {
+    width: 100%;
+    height: 420px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+/* Seção Biografia */
+
+.biografia-info h1 {
+    font-size: var(--font-size-title);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.biografia-info p {
+    padding: 20px;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 600px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+}
